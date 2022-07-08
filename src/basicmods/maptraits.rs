@@ -1,6 +1,6 @@
 
 pub trait ChangeNumber<T> {
-    fn double(&self)->T;
+    fn double(&self,x:T)->T;
 }
 
 struct Point<T>{
@@ -12,9 +12,9 @@ impl之后的T是声明T
 ChangeNumber<T> trait当中的泛型
 Point<T> 结构体泛型
 */
-impl<T> ChangeNumber<T> for Point<T> where T:Copy {
-    fn double(&self)->T{
-        self.i
+impl<T,U> ChangeNumber<T> for Point<U> {
+    fn double(&self,x:T)->T{
+        x
     }
 }
 
@@ -30,6 +30,6 @@ pub fn maptraits_main(){
         i: 10,
         j: 30,
     };
-    let v = p.double();
+    let v = p.double(200);
     println!("{}",v);
 }
