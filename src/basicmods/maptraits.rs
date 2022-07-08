@@ -7,7 +7,11 @@ struct Point<T>{
     i: T,
     j: T,
 }
-
+/*
+impl之后的T是声明T
+ChangeNumber<T> trait当中的泛型
+Point<T> 结构体泛型
+*/
 impl<T> ChangeNumber<T> for Point<T> where T:Copy {
     fn double(&self)->T{
         self.i
