@@ -30,6 +30,6 @@ pub fn maptraits_main(){
         i: 10,
         j: 30,
     };
-    let v = p.double(200);
+    let v = p.double(200.103);
     println!("{}",v);
 }
